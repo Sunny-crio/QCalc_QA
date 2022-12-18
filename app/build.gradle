@@ -11,6 +11,10 @@ plugins {
     id 'application'
 }
 
+ext {
+	buildId = System.currentTimeMillis()
+}
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -26,10 +30,28 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'init.App'
+    mainClass = 'com.crio.qcalc.App'
 }
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+	reports {
+		junitXml.enabled = true
+		def destinationDirectory = System.getProperty("user.home") + "/.gradle/daemon/${buildId}/test-results"
+		junitXml.destination = file(destinationDirectory)
+		html.enabled = true
+	}
+    useJUnitPlatform()
+	testLogging.events ("STANDARD_ERROR")
+	testLogging.events ("STANDARD_OUT")
+	afterSuite { desc, result ->
+		if (!desc.parent) {
+			println "\nTEST RESULT: ${result.resultType}"
+			println "TEST SUMMARY: RAN ${result.testCount} TESTS, " +
+					"${result.successfulTestCount} SUCCEEDED, " +
+					"${result.failedTestCount} FAILED, " +
+					"${result.skippedTestCount} SKIPPED"
+		}
+	}
 }
