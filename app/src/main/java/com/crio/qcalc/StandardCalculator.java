@@ -75,6 +75,10 @@ public int divide(int num1, int num2)
     }
 
 
+    public static void getVersion(){
+        System.out.println("Standard Calculator 1.0");
+    }
+
 
 
 
