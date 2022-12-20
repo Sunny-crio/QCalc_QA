@@ -32,7 +32,6 @@ application {
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
 	reports {
 		junitXml.enabled = true
 		def destinationDirectory = System.getProperty("user.home") + "/.gradle/daemon/${buildId}/test-results"
