@@ -14,8 +14,8 @@ public class App {
         System.out.println(new App().getGreeting());
         StandardCalculator calc = new StandardCalculator();
         Scanner in = new Scanner(System.in);
-         int num1 = in.nextInt();
-         int num2 = in.nextInt();
+        double num1 = in.nextDouble();
+        double num2 = in.nextDouble();
         System.out.println(calc.divide(num1,num2));
    // calc.add(1,1);
     System.out.println(calc.getResult());

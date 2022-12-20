@@ -2,11 +2,11 @@ package com.crio.qcalc;
 
 public class StandardCalculator {
 
-         int num1;
-         int num2;
-       private int result;
+         double num1;
+         double num2;
+       private double result;
     
-public int getResult() {
+public double getResult() {
 
     return result;
 
@@ -14,7 +14,7 @@ public int getResult() {
 
 
 
-public void setResult(int value) {
+public void setResult(double value) {
 
     if (value == 0)
 
@@ -32,26 +32,27 @@ public void setResult(int value) {
 //     System.out.println("Standard Calculator Result:"+ value);
 
 // }
-public int add(int num1, int num2)
+public double add(double num1, double num2)
     {
-        int val1= num1+num2;
+        double val1= num1+num2;
+        
         setResult(val1);
         return (num1+num2);
         
     }
 
-public int subtract(int num1, int num2)
+public double subtract(double num1, double num2)
 {
 
-    int val2= num1- num2;
+    double val2= num1- num2;
     setResult(val2);
     return (num1-num2);
 }
 
 
-public int multiply(int num1, int num2)
+public double multiply(double num1, double num2)
 {
-    int val3= num1*num2;
+    double val3= num1*num2;
     setResult(val3);
     return (num1*num2);
 }
@@ -62,12 +63,12 @@ public int multiply(int num1, int num2)
 
 // }
 
-public int divide(int num1, int num2)
+public double divide(double num1, double num2)
 {
     if (num2==0){
         return 0;
     }
-        int val4= num1/num2;
+    double val4= num1/num2;
         setResult(val4);
         return num1/num2;
        
