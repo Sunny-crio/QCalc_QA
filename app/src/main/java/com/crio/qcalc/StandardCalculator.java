@@ -32,14 +32,30 @@ public void setResult(double value) {
 //     System.out.println("Standard Calculator Result:"+ value);
 
 // }
-public double add(double num1, double num2)
-    {
-        double val1= num1+num2;
-        
-        setResult(val1);
-        return (num1+num2);
-        
+
+public double add(double num1, double num2){
+
+   // double val1 = num1 + num2;
+   // setResult(val1);
+    return (num1+num2);
+
+}
+
+
+
+public double add1(double num1, double num2){
+
+    double result = num1 + num2;
+
+    if((result == Double.MAX_VALUE) || (result == Double.POSITIVE_INFINITY)){
+
+        throw new ArithmeticException("Double overflow");
+
     }
+
+    return result;
+
+}
 
 public double subtract(double num1, double num2)
 {

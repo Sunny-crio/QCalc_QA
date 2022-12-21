@@ -13,6 +13,7 @@ public class StandardCalculatorTest {
     void setup(){
         standardCalculator = new StandardCalculator();
     }
+    
 
 
     @Test
@@ -22,7 +23,9 @@ public class StandardCalculatorTest {
         Assertions.assertThrows(ArithmeticException.class,new Executable(){
             @Override
             public void execute() throws Throwable{
-                standardCalculator.add(Double.MAX_VALUE, Double.MAX_VALUE);
+                standardCalculator.add(1000, 2);
+                double actualResult = standardCalculator.getResult();
+                Assertions.assertEquals(3, actualResult);
             }
         });
     }
@@ -33,7 +36,9 @@ public class StandardCalculatorTest {
         Assertions.assertThrows(ArithmeticException.class,new Executable(){
             @Override
             public void execute() throws Throwable{
-                standardCalculator.subtract(-Double.MAX_VALUE,Double.MAX_VALUE);
+                standardCalculator.subtract(1,4);
+                double actualResult = standardCalculator.getResult();
+                Assertions.assertEquals(-3, actualResult);
             }
         });
     }
@@ -58,9 +63,9 @@ public class StandardCalculatorTest {
     @Test
     @DisplayName("Test Addition of Two Integers")
     void testAdditionOperation(){
-        standardCalculator.add(1.9,0);
+        standardCalculator.add(1,0);
         double actualResult = standardCalculator.getResult();
-        Assertions.assertEquals(1.9, actualResult);
+        Assertions.assertEquals(1, actualResult);
     }
 
     @Test

@@ -24,8 +24,16 @@ public class App {
        //System.out.println(calc.getResult());
 
        System.out.println(calc.multiply(num1,num2));
-       System.out.println(calc.add(num1,num2));
+     
+
        System.out.println(calc.subtract(num1, num2));
+     System.out.println(calc.add1(num1,num2));
+     
+
+     
+          calc.getResult();
+          System.out.println(calc.add(num1, num2)); 
+
 
        
     }
