@@ -60,14 +60,14 @@ public double add1(double num1, double num2){
 }
 public double subtract1(double num1, double num2){
 
-    double result = num1 - num2;
+   
 
-    if((result == -Double.MAX_VALUE) || (result == Double.NEGATIVE_INFINITY)){
+    if((num1 == -Double.MAX_VALUE) || (num2 == Double.NEGATIVE_INFINITY)){
 
         throw new ArithmeticException("Double overflow");
 
     }
-
+   result = (num1-num2);
    return result;
 
 }
