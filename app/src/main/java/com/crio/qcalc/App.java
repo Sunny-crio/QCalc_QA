@@ -27,6 +27,7 @@ public class App {
      
 
        System.out.println(calc.subtract(num1, num2));
+       System.out.println(calc.subtract1(num1, num2));
      System.out.println(calc.add1(num1,num2));
      
 

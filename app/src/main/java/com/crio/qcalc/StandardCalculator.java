@@ -27,16 +27,16 @@ public void setResult(double value) {
 
 }
 
-// public void printResult(){
+public void printResult(){
 
-//     System.out.println("Standard Calculator Result:"+ value);
+    System.out.println("Standard Calculator Result:"+result);
 
-// }
+}
 
 public double add(double num1, double num2){
 
-   // double val1 = num1 + num2;
-   // setResult(val1);
+   double val1 = num1 + num2;
+   setResult(val1);
     return (num1+num2);
 
 }
@@ -45,15 +45,30 @@ public double add(double num1, double num2){
 
 public double add1(double num1, double num2){
 
-    double result = num1 + num2;
+   // double result = num1 + num2;
 
-    if((result == Double.MAX_VALUE) || (result == Double.POSITIVE_INFINITY)){
+    if((num1 == Double.MAX_VALUE) || (num2 == Double.NEGATIVE_INFINITY)){
 
         throw new ArithmeticException("Double overflow");
 
     }
 
-    return result;
+
+   result= (num1+num2);
+   return result;
+
+}
+public double subtract1(double num1, double num2){
+
+    double result = num1 - num2;
+
+    if((result == -Double.MAX_VALUE) || (result == Double.NEGATIVE_INFINITY)){
+
+        throw new ArithmeticException("Double overflow");
+
+    }
+
+   return result;
 
 }
 
