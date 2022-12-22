@@ -47,7 +47,7 @@ public double add1(double num1, double num2){
 
    // double result = num1 + num2;
 
-    if((num1 == Double.MAX_VALUE) || (num2 == Double.NEGATIVE_INFINITY)){
+   if((num1 == Double.MAX_VALUE) || (num2 == Double.NEGATIVE_INFINITY) || (num2==Double.MAX_VALUE) || (num1==Double.NEGATIVE_INFINITY)){
 
         throw new ArithmeticException("Double overflow");
 
@@ -62,7 +62,7 @@ public double subtract1(double num1, double num2){
 
    
 
-    if((num1 == -Double.MAX_VALUE) || (num2 == Double.NEGATIVE_INFINITY)){
+    if((num1 == Double.MAX_VALUE) || (num2 == Double.NEGATIVE_INFINITY) || (num2==Double.MAX_VALUE) || (num1==Double.NEGATIVE_INFINITY)){
 
         throw new ArithmeticException("Double overflow");
 
