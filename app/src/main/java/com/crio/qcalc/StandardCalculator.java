@@ -33,17 +33,17 @@ public void printResult(){
 
 }
 
+// public double add(double num1, double num2){
+
+//    double val1 = num1 + num2;
+//    setResult(val1);
+//     return (num1+num2);
+
+// }
+
+
+
 public double add(double num1, double num2){
-
-   double val1 = num1 + num2;
-   setResult(val1);
-    return (num1+num2);
-
-}
-
-
-
-public double add1(double num1, double num2){
 
    // double result = num1 + num2;
 
@@ -58,7 +58,7 @@ public double add1(double num1, double num2){
    return result;
 
 }
-public double subtract1(double num1, double num2){
+public double subtract(double num1, double num2){
 
    
 
@@ -72,13 +72,13 @@ public double subtract1(double num1, double num2){
 
 }
 
-public double subtract(double num1, double num2)
-{
+// public double subtract(double num1, double num2)
+// {
 
-    double val2= num1- num2;
-    setResult(val2);
-    return (num1-num2);
-}
+//     double val2= num1- num2;
+//     setResult(val2);
+//     return (num1-num2);
+// }
 
 
 public double multiply(double num1, double num2)

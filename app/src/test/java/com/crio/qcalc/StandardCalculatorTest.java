@@ -24,7 +24,7 @@ public class StandardCalculatorTest {
             @Override
             public void execute() throws Throwable{
                 
-                standardCalculator.add1(Double.MAX_VALUE, Double.NEGATIVE_INFINITY);
+                standardCalculator.add(Double.MAX_VALUE, Double.NEGATIVE_INFINITY);
 
                 double actualResult = standardCalculator.getResult();
                 Assertions.assertEquals(1002, actualResult);
@@ -55,7 +55,7 @@ public class StandardCalculatorTest {
     
         public void execute() throws Throwable{
     
-                standardCalculator.subtract1(-Double.MAX_VALUE,Double.MAX_VALUE);
+                standardCalculator.subtract(-Double.MAX_VALUE,Double.MAX_VALUE);
                 double actualResult = standardCalculator.getResult();
         Assertions.assertEquals(2.5, actualResult);
     
