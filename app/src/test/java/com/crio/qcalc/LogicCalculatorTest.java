@@ -16,7 +16,7 @@ public class LogicCalculatorTest {
     @DisplayName("Test AND of two Integers")
     void testANDOperation(){
         //Arrange
-        double expectedResult = 7;
+        double expectedResult = 5;
         //Act
         logicCalculator.AND(5,7);
         double actualResult = logicCalculator.getResult();
