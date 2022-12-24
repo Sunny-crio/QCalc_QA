@@ -2,9 +2,9 @@ package com.crio.qcalc;
 
 public class StandardCalculator {
 
-         double num1;
-         double num2;
-       private double result;
+        //  double num1;
+        //  double num2;
+       protected double result;
     
 public double getResult() {
 

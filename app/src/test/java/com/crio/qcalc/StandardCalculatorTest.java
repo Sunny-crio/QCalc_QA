@@ -23,16 +23,21 @@ public class StandardCalculatorTest {
         Assertions.assertThrows(ArithmeticException.class,new Executable(){
             @Override
             public void execute() throws Throwable{
-                
-                standardCalculator.add(Double.MAX_VALUE, Double.NEGATIVE_INFINITY);
-
-                double actualResult = standardCalculator.getResult();
-                Assertions.assertEquals(1002, actualResult);
+                standardCalculator.add(Double.MAX_VALUE, Double.MAX_VALUE);
             }
         });
     }
-    
-    
+    @Test
+    @DisplayName("Test Subtraction Overflow of Two Doubles")
+    void testSubtractionOverflowForDoubles(){
+        //Assert
+        Assertions.assertThrows(ArithmeticException.class,new Executable(){
+            @Override
+            public void execute() throws Throwable{
+                standardCalculator.subtract(-Double.MAX_VALUE,Double.MAX_VALUE);
+            }
+        });
+    }
 
     @Test
     @DisplayName("Test Addition of Two Doubles")
@@ -41,31 +46,6 @@ public class StandardCalculatorTest {
         double actualResult = standardCalculator.getResult();
         Assertions.assertEquals(2.5, actualResult);
     }
-    @Test
-
-    @DisplayName("Test Subtraction Overflow of Two Doubles")
-    
-    void testSubtractionOverflowForDoubles(){
-    
-        //Assert
-    
-        Assertions.assertThrows(ArithmeticException.class,new Executable(){
-    
-        @Override
-    
-        public void execute() throws Throwable{
-    
-                standardCalculator.subtract(-Double.MAX_VALUE,Double.MAX_VALUE);
-                double actualResult = standardCalculator.getResult();
-        Assertions.assertEquals(2.5, actualResult);
-    
-            }
-    
-        });
-    
-    }
-
-
 
     @Test
     @DisplayName("Test Substraction of Two Doubles")
@@ -79,33 +59,18 @@ public class StandardCalculatorTest {
     @Test
     @DisplayName("Test Addition of Two Integers")
     void testAdditionOperation(){
-        standardCalculator.add(1000,0);
+        standardCalculator.add(1,1);
         double actualResult = standardCalculator.getResult();
-        Assertions.assertEquals(1000, actualResult);
+        Assertions.assertEquals(2, actualResult);
     }
 
     @Test
     @DisplayName("Test Substraction of Two Integers")
     void testSubtractionOperation(){
-        standardCalculator.subtract(1.43,3);
-        double actualResult = standardCalculator.getResult();
-        Assertions.assertEquals(-1.57, actualResult);
-    }
-    @Test
-    @DisplayName("Test Multiplication of Two Integers")
-    void testMultiplicationionOperation(){
-        standardCalculator.multiply(1,1);
-        double actualResult = standardCalculator.getResult();
-        Assertions.assertEquals(1, actualResult);
-    }
-    @Test
-    @DisplayName("Test division of Two Integers")
-    void testDivisionOperation(){
-        standardCalculator.divide(0,1);
+        standardCalculator.subtract(1,1);
         double actualResult = standardCalculator.getResult();
         Assertions.assertEquals(0, actualResult);
     }
-       
-    }
 
 
+}

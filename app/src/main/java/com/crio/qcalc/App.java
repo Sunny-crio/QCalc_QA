@@ -13,6 +13,8 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
         StandardCalculator calc = new StandardCalculator();
+        ScientificCalculator sc = new ScientificCalculator();
+   
         Scanner in = new Scanner(System.in);
         double num1 = in.nextDouble();
         double num2 = in.nextDouble();
@@ -35,6 +37,17 @@ public class App {
           calc.getResult();
           System.out.println(calc.add(num1, num2)); 
 
+          
+          System.out.println(sc.cos(3));
+          System.out.println(sc.sin(3));
+          
+          System.out.println(sc.square(3));
+          System.out.println(sc.tan(3));
+          System.out.println(sc.cbrt(3));
+          System.out.println(sc.sqrt(3));
+          sc.printResult();
+
+         
 
        
     }
