@@ -11,13 +11,16 @@ public class App {
     }
 
     public static void main(String[] args) {
+        double num1;
+        double num2;
+
         System.out.println(new App().getGreeting());
         StandardCalculator calc = new StandardCalculator();
         ScientificCalculator sc = new ScientificCalculator();
    
         Scanner in = new Scanner(System.in);
-        double num1 = in.nextDouble();
-        double num2 = in.nextDouble();
+         num1 = in.nextDouble();
+        num2 = in.nextDouble();
         System.out.println(calc.divide(num1,num2));
    // calc.add(1,1);
     System.out.println(calc.getResult());
@@ -25,7 +28,7 @@ public class App {
 
        //System.out.println(calc.getResult());
 
-       System.out.println(calc.multiply(num1,num2));
+     System.out.println(calc.multiply(num1,num2));
      
 
        System.out.println(calc.subtract(num1, num2));
@@ -46,6 +49,13 @@ public class App {
           System.out.println(sc.cbrt(3));
           System.out.println(sc.sqrt(3));
           sc.printResult();
+
+          
+    LogicCalculator lcalc = new LogicCalculator();
+    lcalc.OR(3,3);
+    lcalc.printResult();
+
+
 
          
 

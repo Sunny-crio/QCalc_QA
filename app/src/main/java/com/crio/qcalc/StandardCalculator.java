@@ -4,7 +4,7 @@ public class StandardCalculator {
 
          double num1;
          double num2;
-       protected double result;
+       protected double result;     
     
 public double getResult() {
 
@@ -81,11 +81,29 @@ public double subtract(double num1, double num2){
 // }
 
 
-public double multiply(double num1, double num2)
-{
-    double val3= num1*num2;
-    setResult(val3);
-    return (num1*num2);
+// public double multiply(double num1, double num2)
+// {
+//     double val3= num1*num2;
+//     setResult(val3);
+//     return (num1*num2);
+// }
+
+
+public  double multiply(double num1, double num2){
+
+//  return result = num1 * num2;
+
+// }
+
+if((num1 == Double.MAX_VALUE) || (num2 == Double.NEGATIVE_INFINITY) || (num2==Double.MAX_VALUE) || (num1==Double.NEGATIVE_INFINITY)){
+
+    throw new ArithmeticException("Double overflow");
+
+}
+
+
+result= (num1*num2);
+return result;
 }
 
 // public void clearResult() {
@@ -97,11 +115,9 @@ public double multiply(double num1, double num2)
 public double divide(double num1, double num2)
 {
     if (num2==0){
-        return 0;
+        throw new ArithmeticException("Divide By Zero");
     }
-    double val4= num1/num2;
-        setResult(val4);
-        return num1/num2;
+   return result = num1 / num2;
        
 
     }

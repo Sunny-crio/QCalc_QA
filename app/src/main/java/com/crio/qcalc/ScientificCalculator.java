@@ -27,7 +27,7 @@ public class ScientificCalculator extends StandardCalculator{
         return result;
     }
     public double square(double a){
-       return multiply(a,a);
+       return result = multiply(a,a);
     }
     
 public double tan(double a){
